@@ -33,10 +33,6 @@ public class JwtUtil {
 		return UUID.fromString(parseClaims(token).getSubject());
 	}
 
-	public String getEmailFromToken(String token) {
-		return parseClaims(token).get("email", String.class);
-	}
-
 	public String getRoleFromToken(String token) {
 		return parseClaims(token).get("role", String.class);
 	}
